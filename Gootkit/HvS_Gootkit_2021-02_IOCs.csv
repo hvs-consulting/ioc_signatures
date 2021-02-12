@@ -1,0 +1,36 @@
+Type,Data,Note
+DOMAIN,chacagrabsterston.top,
+DOMAIN,chubachubakloaka.top,
+DOMAIN,jigajigavantromp.com,
+DOMAIN,kardimardiswerth.com,
+DOMAIN,kvaladrigrosdrom.top,
+DOMAIN,kwieeenmauric.com,
+DOMAIN,lbegardingstorque.com,
+DOMAIN,legalkeriptroerut.top,
+DOMAIN,pillygreamstronh.com,
+DOMAIN,vhachakillewongr.top,
+DOMAIN,luxfixandco.com,
+DOMAIN,kartatatrzanska.pl,
+DOMAIN,cljphotographyny.com,
+URL,https://rep-derap.ensad.fr/view.php?id=47526b6157375976645935535953786b6a76356e55692f78717747476c2f472b6d49334f6d53307539524e3451437145462b39686756714e7048784179546e69662f424c,Dropper
+FULLPATH,%APPDATA%\Microsoft\Windows\Recent\selbstpräsentation_powerpoint_muster_kostenlos.lnk,
+FILENAME,selbstpräsentation_powerpoint_muster_kostenlos.lnk,
+REGISTRY,HKCU:\SOFTWARE\bFlJERq,"Probably random"
+REGISTRY,HKCU:\SOFTWARE\adadfeddca,"Probably random"
+FULLPATH,%TEMP%\markwde316.tmp,"marks that exclusion for Windows Defender was executed"
+FILENAME,markwde316.tmp,"marks that exclusion for Windows Defender was executed"
+FULLPATH,%TEMP%\mrkglobdst1215.tmp,"marks that Active Directory Reconaissance was executed"
+FILENAME,mrkglobdst1215.tmp,"marks that Active Directory Reconaissance was executed"
+FULLPATH,%TEMP%\markgp1841.tmp,"marks that password extraction was executed"
+FILENAME,mrkglobdst1215.tmp,"marks that password extraction was executed"
+MD5,a924a2ed2791bb68b0661d4d8a51e87d,".Net Malware Stage 1"
+MD5,25c5698b9aceef7224c62de73b74693c,".Net Malware Stage 2"
+MD5,eeb13391a39974ce1f88d3dfa791ae1a,"Malware Stage 3"
+MD5,f85b6aecefdc50e19e196f76d2cb177d,"Dropper: video_von_ard_mediathek_herunterladen.zip"
+MD5,bd18a9938e664230f0d22016e5c9fbe4,"Dropper: video_von_ard_mediathek_herunterladen.js"
+FILENAME,video_von_ard_mediathek_herunterladen.zip,Dropper
+FILENAME,video_von_ard_mediathek_herunterladen.js,Dropper
+REGISTRY,HKCU:\Environment\<username>,"Powershell Code"
+REGISTRY,HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce\<username>,Persistence
+REGISTRY,HKCU:\SOFTWARE\<username>1,".NET Malware stage 1"
+REGISTRY,HKCU:\SOFTWARE\<username>1,"Obfuscated .NET Malware stage 2"
