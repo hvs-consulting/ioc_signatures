@@ -15,6 +15,35 @@ As we focus on hunting and specific threat actors, we decided to create a direct
 \* Some rules might require [THORs](https://www.nextron-systems.com/thor/) or [LOKIs](https://github.com/Neo23x0/Loki) extensions of YARA to be fully supported.
 
 
+## IoC Types and Rules
+The following types and rules apply to the \<group\>/HvS_\<group\>_\<year-month\>_IOCs.csv files in the respective subfolders. There might be additional files with more information about the IoCs.
+
+
+| Type        | Description                                                                                 |
+| ----------- | ------------------------------------------------------------------------------------------- |
+| DOMAIN      | Fully Qualified Domain Name (FQDN): No protocol, no ports, no paths                         |
+| URL         | Includes a protocol, a FQDN, and a path if available                                        |
+| IPV4        | IPv4 Address                                                                                |
+| IPV6        | IPv6 Address                                                                                |
+| FULLPATH    | The full path to a file including the filename itself                                       |
+| FILENAME    | Only the filename without any path information                                              |
+| REGISTRY    | A registry key includes its hive (HKCC, HKCU, HKLM, HKU, HKCR) and a full path to that key  |
+| MD5         | MD5 Hash                                                                                    |
+| SHA         | SHA-1 Hash                                                                                  |
+| SHA256      | Sha-256 Hash                                                                                |
+| PROCESSARGS | Full path of a process and passed arguments                                                 |
+| STRING      | Any specific string that does not fit in any of the above categories                        |
+
+
+The CSV file containing the IoCs adheres to the following rules:
+* The CSV file contains 3 columns: Type, Data, Note
+* Type may only be one of the pre-defined value in CAPS
+* Data contains the actual IoC
+* Note is a short description of the IoC. If spaces are needed, the note is surrounded by quotes
+* If possible, Windows environment variables are used for specifying a path (e.g. %TEMP%, etc)
+* Environment depended variables will be replaced with an identifier and surrounded in with the \< and \> signs (e.g. \<username\>)
+
+
 ## FAQ
 
 ### Is there a scheduled update interval of IOCs
