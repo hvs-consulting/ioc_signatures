@@ -148,14 +148,16 @@ German blog posts/search terms:
 Simply posting real tutorials on unknown websites does not explain the high Google ranking. For improving the Google ranking another interesting technique has been used by Gootkit. As soon as they get access to a more popular website, they simple insert a hidden link to their other compromised websites. See the following screenshots as an examples:
 
 ![SEO techniques](./improving_SEO_001.png)
+
+
 ![SEO techniques](./improving_SEO_002.png)
 
-Here legit articles of the website cronicasyversiones[.]com and dart18[.].com link to the compromised website sportkindergarten[.]com. The link is hidden by setting the style to "display: none". We observed this technique on multiple websites:
+Here, legit articles of the website cronicasyversiones[.]com and dart18[.].com link to the compromised website sportkindergarten[.]com. The link is hidden by setting the style to "display: none". We observed this technique on multiple websites:
 - cronicasyversiones[.]com,
 - dart18[.]com
 - saddleexchange[.]com
 
-Neither the list of search terms (./HvS_Gootkit_2021-05_raw-IOCs.txt), nor the list of compromised websites (./HvS_Gootkit_2021-02_IOCs.csv) is exhaustive. Further analysis and investigations are necessary for creating a complete picture of the network of compromised websites used for malware distribution and improvement of the Google ranking.
+Neither the list of search terms (./HvS_Gootkit_2021-05_raw-IOCs.txt), nor the list of compromised websites (./HvS_Gootkit_2021-05_IOCs.csv) is exhaustive. Further analysis and investigations are necessary for creating a complete picture of the network of compromised websites used for malware distribution and improvement of the Google ranking.
 
 We informed the three websites mentioned above and some of the blogs misused for malware distribution. Most blogs do not seem to be maintained anymore and the contacts are therefore not reachable.
 
