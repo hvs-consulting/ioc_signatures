@@ -1,6 +1,6 @@
 # Gootkit IOCs
 
-- Last update: 12.05.2020
+- Last update: 12.05.2021
 - Author: HvS-Consulting AG
 
 ## Context
