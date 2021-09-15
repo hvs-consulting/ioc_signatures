@@ -9,4 +9,4 @@
 - Even if we try to avoid false positives by manual QA, those rules are not meant to be used in production without previous dry runs.
 
 ## References
-- https://raw.githubusercontent.com/k-vitali/Malware-Misc-RE/master/2019-10-01-novter-malware-vk-notes.raw
+- https://techcommunity.microsoft.com/t5/exchange-team-blog/proxyshell-vulnerabilities-and-your-exchange-server/ba-p/2684705
