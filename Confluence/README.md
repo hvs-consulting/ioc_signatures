@@ -1,4 +1,4 @@
-# Proxyshell IOCs
+# Confluence IOCs
 - Last update: 15.09.2021
 - Author: HvS-Consulting AG
 
