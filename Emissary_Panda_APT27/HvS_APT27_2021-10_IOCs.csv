@@ -1,0 +1,77 @@
+type,value,comment
+named pipe,testpipe,HyperBro RAT - named pipe
+windows-service-name,windefenders,HyperBro RAT - persistence mechanism
+windows-service-name,windefende-921919155,Persistence mechanism of HyperBro RAT
+DOMAIN,dataanalyticsclub.com,Domain address used for C2 communication
+IPV4,34.90.207.23,APT27 C2 used during Hafnium attacks reported by welivesecurity.com
+IPV4,103.79.77.200,IP address used for C2 communication
+IPV4,104.168.236.46,IP address used for C2 communication
+IPV4,193.203.203.26,IP address used for C2 communication
+IPV4,74.119.194.153,IP address used for C2 communication
+IPV4,87.98.190.184,IP address used for C2 communication
+IPV4,107.148.131.210,IP address used for C2 communication
+IPV4,35.187.148.253,IP address used for C2 communication
+IPV4,103.79.78.48,IP address used for C2 communication
+IPV4,45.77.250.141,IP address used for C2 communication
+DOMAIN,image.dataanalyticsclub.com,Domain address used for C2 communication
+DOMAIN,avatars.dataanalyticsclub.com,Domain address used for C2 communication
+DOMAIN,fonts.dataanalyticsclub.com,PassiveTotal First 2021-11-10 Last 2022-01-03
+URL,/api/v2/ajax,Malicious endpoint on C2 servers
+URL,https://107.148.131.210/api/v2/ajax,URL used for C2 communication
+URL,http://35.187.148.253/api/v2/ajax,URL used for C2 communication
+text,"Mozilla/5.0 (Windows NT 6.3, WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.116 Safari/537.36",HyperBro RAT - user agent
+filename,%PROGRAMFILES%\Common Files\windefenders\vftrace.dll,HyperBro RAT - Stage 1
+filename,%PROGRAMFILES%\Common Files\windefenders\thumb.dat,HyperBro RAT - Stage 2
+filename,%PROGRAMFILES%\Common Files\windefenders\config.ini,File containing GUID created upon HyperBro execution
+filename,%PROGRAMFILES%\Common Files\vfhost\VFTRACE.DLL,HyperBro RAT - Stage 1
+filename,%PROGRAMFILES%\Common Files\windefenders\msmpeng.exe,HyperBro RAT - legit CyberArk Software binary used for side-loading 
+FILENAME,thumb.dat,HyperBro RAT - Stage 2
+FILENAME,config.ini,File containing GUID created upon HyperBro execution
+FILENAME,vftrace.dll,HyperBro RAT - Stage 1
+FILENAME,msmpeng.exe,HyperBro RAT - legit CyberArk Software binary used for side-loading 
+FILENAME,rar.exe,Rar.exe (WinRar)
+imphash,182f35372e9fd050b6e0610238bcd9fd,HyperBro RAT - Stage 1
+MD5,7655ff65f74f08ee2c54f44e5ef8f098,HyperBro RAT - Stage 1
+MD5,fa0b6ff0898acaa50563c1cb89524fcf,HyperBro RAT - Stage 1
+MD5,3a528cc7cfa7d7cd338c285839c3c727,HyperBro RAT - Stage 2
+MD5,84f09d192ec90542ede22c370836ffa6,HyperBro RAT - Stage 2
+MD5,832415bba4378181e3c975f247b9d0e8,HyperBro RAT - Stage 1
+MD5,42be134aeca1d88024b0d1baac0726d2,HyperBro RAT - Stage 1
+MD5,161d3039d7ee393820acab012f4cc85e,HyperBro RAT - Stage 1
+MD5,061b1d1378c06f9ed46b00fe202f39d8,HyperBro RAT - Stage 2
+MD5,4896a86615ef6835861404bb63a97d7a,HyperBro RAT - Stage 2
+MD5,4109ac08bdc8591c7b46348eb1bca85d,HyperBro RAT - legit CyberArk Software binary used for side-loading 
+MD5,0af2e05abc0ea27d33aa92fc2924655a,Rar.exe (WinRar)
+MD5,60d5648d35bacf5c7aa713b2a0d267d3,Rar.exe (WinRar)
+MD5,5c1c0bfdf0b3abcf4872b605dbea8b1a,HyperBro RAT - Stage 3
+MD5,80df708149bc7d2b19afd698def598f5,HyperBro RAT - Stage 2 (decrypted)
+SHA1,3c7beb8978feac9ba8f5bab0656242232471bf7d,HyperBro RAT - Stage 1
+SHA1,e0d6fcdf23c06c8e8016b0c93a1072c4bab0b659,HyperBro RAT - Stage 1
+SHA1,0dfbbaf0267d79bbe15b1f5a78e1f1bcceea99ca,HyperBro RAT - Stage 2
+SHA1,7fb23c6b4db90b55694bdd1cc5c1b4c706a4e181,HyperBro RAT - Stage 2
+SHA1,7d92970e8394b20b887bf2de60408da15e260d9f,HyperBro RAT - Stage 1
+SHA1,ba2ba390a13938de4d176addd7417ad9a1df2715,HyperBro RAT - Stage 1
+SHA1,6043a8e4f14ac398fd25c10f20d01ba00eb22883,HyperBro RAT - Stage 1
+SHA1,0acea28ddbfb86dc335c295475e5c9a2338bf4e3,HyperBro RAT - Stage 2
+SHA1,95739e00e606e8e7a5c2f658b05820db7ee51910,HyperBro RAT - Stage 2
+SHA1,6423d1c324522bfd2b65108b554847ac4ab02479,HyperBro RAT - legit CyberArk Software binary used for side-loading 
+SHA1,755b979293a43e3a5de23933f35ec6a94b0971ee,Rar.exe (WinRar)
+SHA1,a62af4ac233d914a25e79ec0705e2a187ebd7567,Rar.exe (WinRar)
+SHA1,6d24b289ab4819774ac250d5d4f024e9dee7579c,HyperBro RAT - Stage 3
+SHA1,d3cc018a28b39698bfa486f6e505be4c68573af0,HyperBro RAT - Stage 2 (decrypted)
+SHA256,52072a8f99dacd5c293fccd051eab95516d8b880cd2bc5a7e0f4a30d008e22a7,HyperBro RAT - Stage 1
+SHA256,5aa4dffee6acd65092ddaf7192c1009befd14eb079e694f132707dcda22f9e7f,HyperBro RAT - Stage 1
+SHA256,2ca4181d958369ff92121700c681442664454b0ec4f7942984611cc64caeca61,HyperBro RAT - Stage 2
+SHA256,f2ba8b8aabf73020febd3a925276d52ce88f295537fe57723df714c13f5a8780,HyperBro RAT - Stage 2
+SHA256,333b52c2cfac56b86ee9d54aef4f0ff4144528917bc1aa1fe1613efc2318339a,HyperBro RAT - Stage 1
+SHA256,847fce4a6c3561f51bb94dc682a16908d4ce5b0cf9d4315db6d642ad2a94f8bc,HyperBro RAT - Stage 1
+SHA256,205aa1007e97a58ecb6e9f9a143ed7d337de98864d566d8f6967a9496beff815,HyperBro RAT - Stage 1
+SHA256,fd15d8bf6dd3858897dbc352b64577fd73cfd7ba4c3e4c7e77a070fa43264216,HyperBro RAT - Stage 2
+SHA256,ba3a9382c0e5857f496e998635f8ba0ae2aedf4782defcbe204eaeea5c7e8e24,HyperBro RAT - Stage 2
+SHA256,df847abbfac55fb23715cde02ab52cbe59f14076f9e4bd15edbe28dcecb2a348,HyperBro RAT - legit CyberArk Software binary used for side-loading 
+SHA256,8c4b78ee13c6c7639086b46efdcdebf0cac37ab87fef99ab2c7a72f217b5b03c,Rar.exe (WinRar)
+SHA256,4b16ea1b1273f8746cf399c71bfc1f5bff7378b5414b4ea044c55e0ee08c89d3,Rar.exe (WinRar)
+SHA256,624e85bd669b97bc55ed5c5ea5f6082a1d4900d235a5d2e2a5683a04e36213e8,HyperBro RAT - Stage 3
+STRING,7cb43e5c475d7f369fb090e9a79fe1f841bd1309,HyperBro RAT - legit CyberArk Software binary used for side-loading  (x509-fingerprint-sha1)
+STRING,SOFTWARE\WOW6432Node\Microsoft\config_,HyperBro RAT - registry key used to persist C2 config (registry key)
+STRING,HKCU\Software\Microsoft\Windows\CurrentVersion\Run\windefenders,HyperBro RAT - persistence mechanism (registry key)

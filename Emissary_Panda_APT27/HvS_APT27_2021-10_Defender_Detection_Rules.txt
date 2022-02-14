@@ -1,0 +1,50 @@
+// description: Detects pipe of HyperBro used for IPC
+// license: https://creativecommons.org/licenses/by-nc/4.0/
+// author: Markus Poelloth
+// reference: https://www.hvs-consulting.de/en/threat-intelligence-report-emissary-panda-apt27
+// date: 2022-02-07
+DeviceEvents
+| where ActionType == "NamedPipeEvent" and AdditionalFields contains "testpipe"
+
+
+// description: Detects big newly created rar files, as used by Emissary Panda for collection
+// license: https://creativecommons.org/licenses/by-nc/4.0/
+// author: Moritz Oettle
+// reference: https://www.hvs-consulting.de/en/threat-intelligence-report-emissary-panda-apt27
+// date: 2022-02-07
+DeviceFileEvents 
+| where ActionType == 'FileCreated'
+| where FileName endswith ".rar"
+| where FileSize > 5000000000 // 5 GB
+| sort by FileSize desc
+
+
+// description: Detects C2 network events used by Emissary Panda
+// license: https://creativecommons.org/licenses/by-nc/4.0/
+// author: Marc Stroebel
+// reference: https://www.hvs-consulting.de/en/threat-intelligence-report-emissary-panda-apt27
+// date: 2022-02-07
+let IPs = pack_array("87.98.190.184", "34.90.207.23", "103.79.77.200", "104.168.236.46", "193.203.203.26", "103.79.78.48", "35.187.148.253", "107.148.131.210", "45.77.250.141", "74.119.194.153"); 
+let C2s = pack_array("dataanalyticsclub.com", "image.dataanalyticsclub.com", "fonts.dataanalyticsclub.com", "avatars.dataanalyticsclub.com");
+DeviceNetworkEvents
+| where RemoteIP in(IPs) or RemoteUrl in (C2s)
+
+
+// description: Detects commands used by Emissary Panda
+// notes: might be prone to false positives
+// license: https://creativecommons.org/licenses/by-nc/4.0/
+// author: Marko Dorfhuber
+// reference: https://www.hvs-consulting.de/en/threat-intelligence-report-emissary-panda-apt27
+// date: 2022-02-07
+DeviceProcessEvents 
+| where InitiatingProcessCommandLine == @"cmd.exe /A"
+
+
+// description: Detects event that loads the malicious DLL of Emissary Panda based on name
+// notes: might be prone to false positives
+// license: https://creativecommons.org/licenses/by-nc/4.0/
+// author: Moritz Oettle
+// reference: https://www.hvs-consulting.de/en/threat-intelligence-report-emissary-panda-apt27
+// date: 2022-02-07
+DeviceImageLoadEvents 
+| where ActionType == "ImageLoaded" and FileName contains "VFTRACE.DLL"
