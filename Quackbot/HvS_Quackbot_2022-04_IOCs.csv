@@ -144,9 +144,9 @@ IPV4,82.152.39.39,IP encoded in HKCU:\SOFTWARE\Onoiqpzsovsaxm registry key
 DOMAIN,dharmabadmart.com,Domain contacted during sandbox analysis
 DOMAIN,apolitical.com.mx,Domain contacted during sandbox analysis
 DOMAIN,smartcuria.com,Domain contacted during sandbox analysis
-FULLPATH,\Watdan\dxv1.ocx,File created after first execution of the initial macro malware
-FULLPATH,\Watdan\dxv2.ocx,File created after first execution of the initial macro malware
-FULLPATH,\Watdan\dxv3.ocx,File created after first execution of the initial macro malware
+FULLPATH,C:\Watdan\dxv1.ocx,File created after first execution of the initial macro malware
+FULLPATH,C:\Watdan\dxv2.ocx,File created after first execution of the initial macro malware
+FULLPATH,C:\Watdan\dxv3.ocx,File created after first execution of the initial macro malware
 FILENAME,dxv1.ocx,File created after first execution of the initial macro malware
 FILENAME,dxv2.ocx,File created after first execution of the initial macro malware
 FILENAME,dxv3.ocx,File created after first execution of the initial macro malware
