@@ -1,6 +1,6 @@
 # Gootkit IOCs
 
-- Last update: 12.05.2021
+- Last update: 10.05.2022
 - Author: HvS-Consulting AG
 
 ## Context
@@ -168,3 +168,4 @@ We informed the three websites mentioned above and some of the blogs misused for
 - https://blog.malwarebytes.com/threat-analysis/2020/11/german-users-targeted-with-gootkit-banker-or-revil-ransomware/
 - https://www.trendmicro.com/en_us/research/20/l/investigating-the-gootkit-loader.html
 - https://securityboulevard.com/2021/02/long-live-osiris-banking-trojan-targets-german-ip-addresses/
+- https://thedfirreport.com/2022/05/09/seo-poisoning-a-gootloader-story/
