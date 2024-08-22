@@ -1,0 +1,4 @@
+Type,Data,Note
+"IPV4","109.120.137.70","MONTI Ransomware, used IP in an attack from July 24"
+"IPV4","45.153.230.33","MONTI Ransomware, used IP in an attack from July 24"
+"STRING","AP67MJWE","MONTI Ransomware, used Hostname in an attack from July 24"

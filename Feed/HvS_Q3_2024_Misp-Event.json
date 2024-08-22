@@ -1,0 +1,132 @@
+{
+  "Event": {
+    "info": "HvS IOCs Q3/2024",
+    "analysis": "0",
+    "threat_level_id": "1",
+    "extends_uuid": "",
+    "uuid": "9d79a5e9-e0d6-488f-9c2c-48d0ddd59299",
+    "date": "2024-08-21",
+    "publish_timestamp": "1724311971",
+    "published": true,
+    "timestamp": "1724232238",
+    "Orgc": {
+      "name": "HvS-Consulting",
+      "uuid": "4dbf4c9d-1873-4923-a4a9-2d40d157ac80"
+    },
+    "Tag": [
+      {
+        "name": "misp:event-type=\"collection\"",
+        "colour": "#00f370"
+      },
+      {
+        "name": "tlp:white",
+        "colour": "#ffffff"
+      }
+    ],
+    "Attribute": [
+      {
+        "category": "Payload delivery",
+        "deleted": false,
+        "comment": "MONTI Ransomware, used IP in an attack from July 24",
+        "uuid": "5d25d310-29d7-4017-877f-c3729ab7ff95",
+        "type": "ip-src",
+        "to_ids": true,
+        "value": "109.120.137.70",
+        "timestamp": "1724232238",
+        "disable_correlation": false,
+        "Tag": [
+          {
+            "name": "tlp:white",
+            "colour": "#ffffff"
+          },
+          {
+            "name": "osint:certainty=\"100\"",
+            "colour": "#007ad2"
+          },
+          {
+            "name": "osint:source-type=\"manual-analysis\"",
+            "colour": "#005fa4"
+          },
+          {
+            "name": "false-positive:risk=\"low\"",
+            "colour": "#00565c"
+          },
+          {
+            "name": "cccs:ip-category=\"c2\"",
+            "colour": "#6f5000"
+          },
+          {
+            "name": "cccs:event=\"remote-access\"",
+            "colour": "#443100"
+          }
+        ]
+      },
+      {
+        "category": "Payload delivery",
+        "deleted": false,
+        "comment": "MONTI Ransomware, used IP in an attack from July 24",
+        "uuid": "0e3cc9ee-8ef9-4386-b870-c6800d4a2c42",
+        "type": "ip-src",
+        "to_ids": true,
+        "value": "45.153.230.33",
+        "timestamp": "1724232238",
+        "disable_correlation": false,
+        "Tag": [
+          {
+            "name": "tlp:white",
+            "colour": "#ffffff"
+          },
+          {
+            "name": "osint:certainty=\"100\"",
+            "colour": "#007ad2"
+          },
+          {
+            "name": "osint:source-type=\"manual-analysis\"",
+            "colour": "#005fa4"
+          },
+          {
+            "name": "false-positive:risk=\"low\"",
+            "colour": "#00565c"
+          },
+          {
+            "name": "cccs:ip-category=\"c2\"",
+            "colour": "#6f5000"
+          },
+          {
+            "name": "cccs:event=\"remote-access\"",
+            "colour": "#443100"
+          }
+        ]
+      },
+      {
+        "category": "Other",
+        "deleted": false,
+        "comment": "MONTI Ransomware, used Hostname in an attack from July 24",
+        "uuid": "ef3dc9e2-780f-4f65-856f-2785a57a9568",
+        "type": "text",
+        "to_ids": false,
+        "value": "AP67MJWE",
+        "timestamp": "1724232179",
+        "disable_correlation": false,
+        "Tag": [
+          {
+            "name": "tlp:white",
+            "colour": "#ffffff"
+          },
+          {
+            "name": "osint:certainty=\"100\"",
+            "colour": "#007ad2"
+          },
+          {
+            "name": "osint:source-type=\"manual-analysis\"",
+            "colour": "#005fa4"
+          },
+          {
+            "name": "false-positive:risk=\"low\"",
+            "colour": "#00565c"
+          }
+        ]
+      }
+    ]
+  }
+}
