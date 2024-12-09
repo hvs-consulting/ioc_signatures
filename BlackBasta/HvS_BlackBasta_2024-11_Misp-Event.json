@@ -1,0 +1,483 @@
+{
+  "Event": {
+    "threat_level_id": "1",
+    "date": "2024-12-03",
+    "analysis": "2",
+    "uuid": "c6beadc3-2c06-4e40-92dc-6de2facdd3fb",
+    "published": true,
+    "timestamp": "1733230171",
+    "extends_uuid": "",
+    "info": "Black Basta Social Engineering",
+    "publish_timestamp": "1733480935",
+    "Orgc": {
+      "name": "HvS-Consulting",
+      "uuid": "4dbf4c9d-1873-4923-a4a9-2d40d157ac80"
+    },
+    "Tag": [
+      {
+        "name": "misp:event-type=\"incident\"",
+        "colour": "#00e66a"
+      },
+      {
+        "name": "threatmatch-sectors:sector=\"Forest, Paper & Packaging\"",
+        "colour": "#bb007b"
+      },
+      {
+        "name": "threatmatch-incident-types:incident_type=\"Social Engineering Activity\"",
+        "colour": "#5b00cf"
+      },
+      {
+        "name": "tlp:white",
+        "colour": "#ffffff"
+      },
+      {
+        "name": "misp-galaxy:malpedia=\"Black Basta (ELF)\"",
+        "colour": "#0088cc"
+      }
+    ],
+    "Attribute": [
+      {
+        "disable_correlation": false,
+        "category": "Network activity",
+        "to_ids": true,
+        "type": "url",
+        "uuid": "00f814dd-7c33-497e-9a4d-cddcd61dd3fa",
+        "timestamp": "1733229665",
+        "comment": "Download URL of StaticEngine.zip containing malware hosted on Microsoft SharePoint",
+        "deleted": false,
+        "value": "https://binusianorg-my.sharepoint.com/personal/radja_hizbullah_binus_ac_id/_layouts/15/download.aspx?SourceUrl=%2Fpersonal%2Fradja%5Fhizbullah%5Fbinus%5Fac%5Fid%2FDocuments%2FStaticEngine%2Ezip",
+        "Tag": [
+          {
+            "name": "osint:source-type=\"manual-analysis\"",
+            "colour": "#005fa4"
+          },
+          {
+            "name": "osint:certainty=\"100\"",
+            "colour": "#007ad2"
+          },
+          {
+            "name": "false-positive:risk=\"low\"",
+            "colour": "#00565c"
+          },
+          {
+            "name": "cccs:event=\"malware-download\"",
+            "colour": "#412f00"
+          },
+          {
+            "name": "cccs:domain-category=\"cloud-infrastructure\"",
+            "colour": "#5b4100"
+          },
+          {
+            "name": "tlp:white",
+            "colour": "#ffffff"
+          }
+        ]
+      },
+      {
+        "disable_correlation": true,
+        "category": "Other",
+        "to_ids": false,
+        "type": "text",
+        "uuid": "90691218-cc90-4fc3-b15f-01ddce766af1",
+        "timestamp": "1733229665",
+        "comment": "",
+        "deleted": false,
+        "value": "The user was tricked into granting remote control to the attacker via the Windows 10/11 built-in remote access tool \"Quick Assist\" trough a social engineering teams call after email bombing.\r\nThe TTPs suggest that this is related to the Black Basta ransomware campaign.",
+        "Tag": [
+          {
+            "name": "osint:source-type=\"manual-analysis\"",
+            "colour": "#005fa4"
+          },
+          {
+            "name": "osint:certainty=\"100\"",
+            "colour": "#007ad2"
+          },
+          {
+            "name": "false-positive:risk=\"low\"",
+            "colour": "#00565c"
+          },
+          {
+            "name": "cccs:event=\"malware-download\"",
+            "colour": "#412f00"
+          },
+          {
+            "name": "cccs:domain-category=\"cloud-infrastructure\"",
+            "colour": "#5b4100"
+          },
+          {
+            "name": "tlp:white",
+            "colour": "#ffffff"
+          }
+        ]
+      }
+    ],
+    "Object": [
+      {
+        "description": "File object describing a file with meta-information",
+        "template_version": "24",
+        "meta-category": "file",
+        "timestamp": "1733229665",
+        "template_uuid": "688c46fb-5edb-40a3-8273-1af7923e2215",
+        "uuid": "13255d0f-b5f4-4a99-b3fc-9580942384b8",
+        "name": "file",
+        "comment": "Malicious dll extracted from a zip file by the attackers.",
+        "deleted": false,
+        "Attribute": [
+          {
+            "disable_correlation": false,
+            "category": "Payload delivery",
+            "to_ids": true,
+            "type": "sha1",
+            "uuid": "b822064c-3ec1-48c7-8ffb-829c78a544d4",
+            "object_relation": "sha1",
+            "timestamp": "1733229665",
+            "comment": "",
+            "deleted": false,
+            "value": "478cb4dd7120ad6ce38de2105dc6019b8f2b37a2",
+            "Tag": [
+              {
+                "name": "osint:source-type=\"manual-analysis\"",
+                "colour": "#005fa4"
+              },
+              {
+                "name": "osint:certainty=\"100\"",
+                "colour": "#007ad2"
+              },
+              {
+                "name": "false-positive:risk=\"low\"",
+                "colour": "#00565c"
+              },
+              {
+                "name": "threatmatch-malware-types:malware_type=\"Trojan\"",
+                "colour": "#5300dc"
+              },
+              {
+                "name": "tlp:white",
+                "colour": "#ffffff"
+              }
+            ]
+          },
+          {
+            "disable_correlation": false,
+            "category": "Payload delivery",
+            "to_ids": true,
+            "type": "md5",
+            "uuid": "4ec7c8cf-5348-480b-a5c7-d3d6c51024ab",
+            "object_relation": "md5",
+            "timestamp": "1733229665",
+            "comment": "",
+            "deleted": false,
+            "value": "a6a363441f990b753f61c27959d949a2",
+            "Tag": [
+              {
+                "name": "osint:source-type=\"manual-analysis\"",
+                "colour": "#005fa4"
+              },
+              {
+                "name": "osint:certainty=\"100\"",
+                "colour": "#007ad2"
+              },
+              {
+                "name": "false-positive:risk=\"low\"",
+                "colour": "#00565c"
+              },
+              {
+                "name": "threatmatch-malware-types:malware_type=\"Trojan\"",
+                "colour": "#5300dc"
+              },
+              {
+                "name": "tlp:white",
+                "colour": "#ffffff"
+              }
+            ]
+          },
+          {
+            "disable_correlation": false,
+            "category": "Payload delivery",
+            "to_ids": true,
+            "type": "sha256",
+            "uuid": "15c8e696-19b1-4488-b95b-7b078c822783",
+            "object_relation": "sha256",
+            "timestamp": "1733229665",
+            "comment": "",
+            "deleted": false,
+            "value": "9060c74636eedb2010698c682da48109625421b1d7d4c773c9b1d49b962ebd01",
+            "Tag": [
+              {
+                "name": "osint:source-type=\"manual-analysis\"",
+                "colour": "#005fa4"
+              },
+              {
+                "name": "osint:certainty=\"100\"",
+                "colour": "#007ad2"
+              },
+              {
+                "name": "false-positive:risk=\"low\"",
+                "colour": "#00565c"
+              },
+              {
+                "name": "threatmatch-malware-types:malware_type=\"Trojan\"",
+                "colour": "#5300dc"
+              },
+              {
+                "name": "tlp:white",
+                "colour": "#ffffff"
+              }
+            ]
+          },
+          {
+            "disable_correlation": false,
+            "category": "Payload delivery",
+            "to_ids": true,
+            "type": "filename",
+            "uuid": "b4c9c252-5fc3-44f6-a0f2-7240e93c4599",
+            "object_relation": "filename",
+            "timestamp": "1733229665",
+            "comment": "",
+            "deleted": false,
+            "value": "StaticEngine.dll",
+            "Tag": [
+              {
+                "name": "osint:source-type=\"manual-analysis\"",
+                "colour": "#005fa4"
+              },
+              {
+                "name": "osint:certainty=\"100\"",
+                "colour": "#007ad2"
+              },
+              {
+                "name": "false-positive:risk=\"low\"",
+                "colour": "#00565c"
+              },
+              {
+                "name": "threatmatch-malware-types:malware_type=\"Trojan\"",
+                "colour": "#5300dc"
+              },
+              {
+                "name": "tlp:white",
+                "colour": "#ffffff"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "File object describing a file with meta-information",
+        "template_version": "24",
+        "meta-category": "file",
+        "timestamp": "1733229665",
+        "template_uuid": "688c46fb-5edb-40a3-8273-1af7923e2215",
+        "uuid": "a6369411-12ab-46cb-8a40-9d1dae4fad51",
+        "name": "file",
+        "comment": "",
+        "deleted": false,
+        "Attribute": [
+          {
+            "disable_correlation": true,
+            "category": "Other",
+            "to_ids": false,
+            "type": "text",
+            "uuid": "fbd8a490-3618-4bab-bf7d-05b33bee3836",
+            "object_relation": "text",
+            "timestamp": "1733229665",
+            "comment": "",
+            "deleted": false,
+            "value": "Legitimate Microsoft Quick Assist remote control application. Abused by the attackers to gain remote access.",
+            "Tag": [
+              {
+                "name": "osint:certainty=\"100\"",
+                "colour": "#007ad2"
+              },
+              {
+                "name": "osint:source-type=\"manual-analysis\"",
+                "colour": "#005fa4"
+              },
+              {
+                "name": "false-positive:risk=\"high\"",
+                "colour": "#00a3ad"
+              },
+              {
+                "name": "threatmatch-malware-types:malware_type=\"Legitimate Tool\"",
+                "colour": "#35008c"
+              },
+              {
+                "name": "tlp:white",
+                "colour": "#ffffff"
+              }
+            ]
+          },
+          {
+            "disable_correlation": false,
+            "category": "Payload delivery",
+            "to_ids": true,
+            "type": "sha1",
+            "uuid": "f20fdcbd-e39f-4231-8c6e-9975c1df57c3",
+            "object_relation": "sha1",
+            "timestamp": "1733229665",
+            "comment": "",
+            "deleted": false,
+            "value": "124e66f275e089c8ec72801606c6414c6ec8d769",
+            "Tag": [
+              {
+                "name": "osint:certainty=\"100\"",
+                "colour": "#007ad2"
+              },
+              {
+                "name": "osint:source-type=\"manual-analysis\"",
+                "colour": "#005fa4"
+              },
+              {
+                "name": "false-positive:risk=\"high\"",
+                "colour": "#00a3ad"
+              },
+              {
+                "name": "threatmatch-malware-types:malware_type=\"Legitimate Tool\"",
+                "colour": "#35008c"
+              },
+              {
+                "name": "tlp:white",
+                "colour": "#ffffff"
+              }
+            ]
+          },
+          {
+            "disable_correlation": false,
+            "category": "Payload delivery",
+            "to_ids": true,
+            "type": "md5",
+            "uuid": "92581b00-9651-4a18-be51-8c9d8b4b6ffa",
+            "object_relation": "md5",
+            "timestamp": "1733229665",
+            "comment": "",
+            "deleted": false,
+            "value": "59d5ec25d19fde9c2a1a3e61fccd50ee",
+            "Tag": [
+              {
+                "name": "osint:certainty=\"100\"",
+                "colour": "#007ad2"
+              },
+              {
+                "name": "osint:source-type=\"manual-analysis\"",
+                "colour": "#005fa4"
+              },
+              {
+                "name": "false-positive:risk=\"high\"",
+                "colour": "#00a3ad"
+              },
+              {
+                "name": "threatmatch-malware-types:malware_type=\"Legitimate Tool\"",
+                "colour": "#35008c"
+              },
+              {
+                "name": "tlp:white",
+                "colour": "#ffffff"
+              }
+            ]
+          },
+          {
+            "disable_correlation": false,
+            "category": "Payload delivery",
+            "to_ids": true,
+            "type": "sha256",
+            "uuid": "59653ab1-76ca-4073-ba07-c7682e01a82e",
+            "object_relation": "sha256",
+            "timestamp": "1733229665",
+            "comment": "",
+            "deleted": false,
+            "value": "97c729e7ca2c1f20c0ed147cd041bb301b23aa141f3d2afd35aa434d109ba309",
+            "Tag": [
+              {
+                "name": "osint:certainty=\"100\"",
+                "colour": "#007ad2"
+              },
+              {
+                "name": "osint:source-type=\"manual-analysis\"",
+                "colour": "#005fa4"
+              },
+              {
+                "name": "false-positive:risk=\"high\"",
+                "colour": "#00a3ad"
+              },
+              {
+                "name": "threatmatch-malware-types:malware_type=\"Legitimate Tool\"",
+                "colour": "#35008c"
+              },
+              {
+                "name": "tlp:white",
+                "colour": "#ffffff"
+              }
+            ]
+          },
+          {
+            "disable_correlation": false,
+            "category": "Payload delivery",
+            "to_ids": true,
+            "type": "filename",
+            "uuid": "2e8e6b58-004f-4567-a333-4018d6ddda81",
+            "object_relation": "filename",
+            "timestamp": "1733229665",
+            "comment": "",
+            "deleted": false,
+            "value": "quickassist.exe",
+            "Tag": [
+              {
+                "name": "osint:certainty=\"100\"",
+                "colour": "#007ad2"
+              },
+              {
+                "name": "osint:source-type=\"manual-analysis\"",
+                "colour": "#005fa4"
+              },
+              {
+                "name": "false-positive:risk=\"high\"",
+                "colour": "#00a3ad"
+              },
+              {
+                "name": "threatmatch-malware-types:malware_type=\"Legitimate Tool\"",
+                "colour": "#35008c"
+              },
+              {
+                "name": "tlp:white",
+                "colour": "#ffffff"
+              }
+            ]
+          },
+          {
+            "disable_correlation": false,
+            "category": "Other",
+            "to_ids": true,
+            "type": "text",
+            "uuid": "f1e6c5ab-9ec1-486d-945f-97cf9ad1a20d",
+            "object_relation": "fullpath",
+            "timestamp": "1733229665",
+            "comment": "",
+            "deleted": false,
+            "value": "%WINDIR%\\system32\\quickassist.exe",
+            "Tag": [
+              {
+                "name": "osint:certainty=\"100\"",
+                "colour": "#007ad2"
+              },
+              {
+                "name": "osint:source-type=\"manual-analysis\"",
+                "colour": "#005fa4"
+              },
+              {
+                "name": "false-positive:risk=\"high\"",
+                "colour": "#00a3ad"
+              },
+              {
+                "name": "threatmatch-malware-types:malware_type=\"Legitimate Tool\"",
+                "colour": "#35008c"
+              },
+              {
+                "name": "tlp:white",
+                "colour": "#ffffff"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
