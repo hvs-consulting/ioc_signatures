@@ -1,0 +1,22 @@
+title: Bluehammer exploit
+id: 7f325068-a59a-4178-bd1c-3e6729304889
+status: experimental
+description: This detection rule detects the executable name of the original bluehammer exploit hosted on github.
+references:
+    - https://deadeclipse666.blogspot.com/2026/04/public-disclosure.html
+    - https://github.com/Nightmare-Eclipse/BlueHammer
+author: Moritz Oettle (HvS-Consulting GmbH)
+date: 2026-04-08
+tags:
+    - attack.privilege-escalation
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection:
+        Image|contains:
+            - 'FunnyApp.exe'
+    condition: selection
+falsepositives:
+    - Other executables called FunnyApp.exe. This detection relies on attacker using the same name for the executable as the creator in the Github repository.
+level: medium

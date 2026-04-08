@@ -1,0 +1,134 @@
+{
+  "Event": {
+    "published": false,
+    "uuid": "a1406b6b-d648-4f1d-a78f-dd438e302838",
+    "threat_level_id": "1",
+    "date": "2026-04-08",
+    "info": "HvS-TI-2026-04 BlueHammer",
+    "timestamp": "1775633560",
+    "analysis": "0",
+    "extends_uuid": "",
+    "publish_timestamp": "0",
+    "Orgc": {
+      "uuid": "4dbf4c9d-1873-4923-a4a9-2d40d157ac80",
+      "name": "HvS-Consulting"
+    },
+    "Tag": [
+      {
+        "colour": "#ffffff",
+        "name": "tlp:white"
+      },
+      {
+        "colour": "#00ff38",
+        "name": "hvs:sharing=\"threat-insights\""
+      },
+      {
+        "colour": "#00e66a",
+        "name": "misp:event-type=\"analysis\""
+      }
+    ],
+    "Attribute": [
+      {
+        "type": "url",
+        "deleted": false,
+        "uuid": "0a305670-2878-4b23-8c00-d7432ffd6ca6",
+        "disable_correlation": false,
+        "value": "https://github.com/Nightmare-Eclipse/BlueHammer",
+        "timestamp": "1775633529",
+        "to_ids": true,
+        "category": "Network activity",
+        "comment": "Source of Exploit",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          }
+        ]
+      },
+      {
+        "type": "md5",
+        "deleted": false,
+        "uuid": "0fdeaca2-75b1-46f6-9b40-e2efc16ef6e9",
+        "disable_correlation": false,
+        "value": "9210d45827b893c515e961d3008b4fb8",
+        "timestamp": "1775633547",
+        "to_ids": true,
+        "category": "Payload delivery",
+        "comment": "2026-08-04 FunnyApp.exe",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "type": "filename",
+        "deleted": false,
+        "uuid": "6dcf6674-4157-4893-986a-adbc2b901db5",
+        "disable_correlation": false,
+        "value": "FunnyApp.exe",
+        "timestamp": "1775633560",
+        "to_ids": true,
+        "category": "Payload delivery",
+        "comment": "",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#00a3ad",
+            "name": "false-positive:risk=\"high\""
+          }
+        ]
+      },
+      {
+        "type": "sha1",
+        "deleted": false,
+        "uuid": "46a1ee46-c470-4b31-a6aa-540e44758b25",
+        "disable_correlation": false,
+        "value": "a6ddb1c5ad6a1e16c0f92fc2c967dca3c979a2cc",
+        "timestamp": "1775633547",
+        "to_ids": true,
+        "category": "Payload delivery",
+        "comment": "2026-08-04 FunnyApp.exe",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      },
+      {
+        "type": "sha256",
+        "deleted": false,
+        "uuid": "09671499-4997-4f69-8e54-73d9938972c8",
+        "disable_correlation": false,
+        "value": "93008c42764b74b759678fd376abd90696f74af408600727b6649286d8424270",
+        "timestamp": "1775633547",
+        "to_ids": true,
+        "category": "Payload delivery",
+        "comment": "2026-08-04 FunnyApp.exe",
+        "Tag": [
+          {
+            "colour": "#005fa4",
+            "name": "osint:source-type=\"manual-analysis\""
+          },
+          {
+            "colour": "#00565c",
+            "name": "false-positive:risk=\"low\""
+          }
+        ]
+      }
+    ]
+  }
+}
